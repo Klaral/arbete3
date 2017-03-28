@@ -14,7 +14,6 @@ var provider = new firebase.auth.GithubAuthProvider();
 loggin.addEventListener('click',function(){
     
     // Skapa ett Promise som visar ett popup-fönster
-    // Obs! Kontrollera att fönstret inte blockeras av en ad blocker
     firebase.auth().signInWithPopup(provider)
     .then(function(result) {
         console.log(result.user);
@@ -28,13 +27,23 @@ loggin.addEventListener('click',function(){
                 user = JSON.parse(user);
                 userinfo.innerHTML = user.displayName;
                 var imageDiv = document.getElementById("imageDiv");
-                //imageDiv.setAttribute('src', user.photoURL);
+                imageDiv.setAttribute('src', user.photoURL);
             }
         }
 
     })
 
 
+})
+
+loggut.addEventListener('click', function(){
+  firebase.auth().signOut()
+  .then(function(result){
+      
+      delete sessionStorage.user; 
+      userinfo.innerHTML = "";
+      
+  })
 })
     
  
