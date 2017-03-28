@@ -35,7 +35,7 @@ firebase.auth().signInWithPopup(provider)
 })
 
       
-}
+})
     
  
       }
