@@ -37,7 +37,7 @@ loggin.addEventListener('click',function(){
                 var imageDiv = document.getElementById("imageDiv");
                 imageDiv.setAttribute('src', user.photoURL);*/
             }
-        }
+        })
 
     })
 
