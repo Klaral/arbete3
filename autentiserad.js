@@ -32,7 +32,7 @@ firebase.auth().signInWithPopup(provider)
     }   
     }
 	
-}
+})
 
       
 }
