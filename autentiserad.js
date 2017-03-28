@@ -22,12 +22,20 @@ loggin.addEventListener('click',function(){
             var user = sessionStorage.user;  
             if(user === undefined || user === null){
                 loggut.disabled = true;  
-            } else{   
+            } else{ 
+                
+                var user = JSON.parse(user);        
+       var userinfo = document.getElementById("status");
+       status.innerHTML = data.displayName;
+       var imageDiv = document.getElementById("divImage");
+       image.setAttribute('src', data.photoURL);
+       console.log(user);
+            }
 
-                user = JSON.parse(user);
+                /*user = JSON.parse(user);
                 userinfo.innerHTML = user.displayName;
                 var imageDiv = document.getElementById("imageDiv");
-                imageDiv.setAttribute('src', user.photoURL);
+                imageDiv.setAttribute('src', user.photoURL);*/
             }
         }
 
