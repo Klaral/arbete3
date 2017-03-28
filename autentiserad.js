@@ -27,8 +27,8 @@ loggin.addEventListener('click',function(){
                 var user = JSON.parse(user);        
        var userinfo = document.getElementById("userinfo");
        status.innerHTML = user.email;
-       var imageDiv = document.getElementById("imageDiv");
-       image.setAttribute('src', user.photoURL);
+       /*var imageDiv = document.getElementById("imageDiv");
+       image.setAttribute('src', user.photoURL);*/
        console.log(user);
             }
 
