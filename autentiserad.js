@@ -18,7 +18,7 @@ loggin.addEventListener('click',function(){
     .then(function(result) {
         console.log(result.user);
         if(result.user !== null){
-            sessionStorage.user = JSON.stringify(result.user);
+            var user = JSON.stringify(result.user); = JSON.stringify(result.user);
             var user = sessionStorage.user;  
             if(user === undefined || user === null){
                 loggut.disabled = true;  
