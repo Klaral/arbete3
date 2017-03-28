@@ -2,7 +2,7 @@ window.onload = function(){
 
 var loggin = document.getElementById("loggin"); 
 var loggut = document.getElementById("loggut");    
-var userinfo = document.getElementById("userinfo");
+
     
 // Ett objekt för att hantera GitHub-autentisering
 var provider = new firebase.auth.GithubAuthProvider();
@@ -25,10 +25,10 @@ loggin.addEventListener('click',function(){
             } else{ 
                 
                 var user = JSON.parse(user);        
-       var userinfo = document.getElementById("status");
-       status.innerHTML = data.displayName;
-       var imageDiv = document.getElementById("divImage");
-       image.setAttribute('src', data.photoURL);
+       var userinfo = document.getElementById("userinfo");
+       status.innerHTML = user.displayName;
+       var imageDiv = document.getElementById("imageDiv");
+       image.setAttribute('src', user.photoURL);
        console.log(user);
             }
 
