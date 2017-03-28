@@ -28,7 +28,7 @@ loggin.addEventListener('click',function(){
                 user = JSON.parse(user);
                 userinfo.innerHTML = user.displayName;
                 var imageDiv = document.getElementById("imageDiv");
-                imageDiv.setAttribute('src', user.photoURL);
+                //imageDiv.setAttribute('src', user.photoURL);
             }
         }
 
