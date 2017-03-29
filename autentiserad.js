@@ -26,7 +26,7 @@ loggin.addEventListener('click',function(){
                 
                  user = JSON.parse(user);        
        var userinfo = document.getElementById("userinfo");
-       userinfo.innerHTML = user.email;
+       status.innerHTML = user.email;
        /*var imageDiv = document.getElementById("imageDiv");
        image.setAttribute('src', user.photoURL);*/
        console.log(user);
