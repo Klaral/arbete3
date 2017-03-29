@@ -24,9 +24,9 @@ loggin.addEventListener('click',function(){
                 loggut.disabled = true;  
             } else{ 
                 
-                var user = JSON.parse(user);        
+                 user = JSON.parse(user);        
        var userinfo = document.getElementById("userinfo");
-       status.innerHTML = user.email;
+       userinfo.innerHTML = user.email;
        /*var imageDiv = document.getElementById("imageDiv");
        image.setAttribute('src', user.photoURL);*/
        console.log(user);
