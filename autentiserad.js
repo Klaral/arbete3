@@ -1,46 +1,60 @@
 window.onload = function(){
 
+// Ett objekt för att hantera GitHub-autentisering
+var provider = new firebase.auth.GithubAuthProvider();    
 var loggin = document.getElementById("loggin"); 
 var loggut = document.getElementById("loggut");    
 var infotext = document.getElementById("infotext");
 var infoFail = document.getElementById("infoFail");
 var vipBtn = document.getElementById("vipBtn"); 
+var userEmail;    
     
     vipBtn.disabled = true;
     
-// Ett objekt för att hantera GitHub-autentisering
-var provider = new firebase.auth.GithubAuthProvider();
+    
+    
+    /**VIP**/
+    
+    loggut.style.dispaly = "none";
 
  
     
     /**loggin**/
     
-loggin.addEventListener('click',function(){
+loggin.addEventListener('click',function(event){
     
     // Skapa ett Promise som visar ett popup-fönster
     firebase.auth().signInWithPopup(provider)
     .then(function(result) {
-        console.log(result.user);
-        if(result.user !== null){
-            window.sessionStorage.user = JSON.stringify(result.user);
-            var user = sessionStorage.user;  
-            if(user === undefined || user === null){
-                loggut.disabled = true;  
+        var user = result.user;
+        userEmail = user.email; 
+        if(user.displayName == null){
+            infoText.innerHTML = `Du är inloggad som ${user.email}`;
+        } else {
+            infoText.innerHTML = `Du är inloggad som ${user.displayName}`;
+        }
+              
+            if(userEmail == "klaralundgren@gmail.com"){
+                vipBtn.disabled = false;
+                  
             } else{ 
-                
-                 user = JSON.parse(user);        
-       var userinfo = document.getElementById("userinfo");
-       status.innerHTML = user.email;
-       /*var imageDiv = document.getElementById("imageDiv");
-       image.setAttribute('src', user.photoURL);*/
-       console.log(user);
+                        
+       vipBtn.disabled = true;
+       
             }
 
                
-        }
+        });
+    loggin.style.display = "none";
+    loggut.style.dispaly = "inherit";
 
-    })
+    });
+    
+    vipBtn.addEventListener("click", function(event){
+        window.alert("Hej Klara");
+    });
 
+    /**loggut**/
 
 })
 
