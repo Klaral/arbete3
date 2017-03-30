@@ -65,7 +65,7 @@ loggin.addEventListener('click',function(event){
         console.log("Du är utloggad");
         infoFail.innerHTML = `Du är inte inloggad`;
     
-    })catch(function(error){
+    }).catch(function(error){
         console.log("Utloggning misslyckades");
         infoFail.innerHTML = "Utloggning misslyckades";
     });
