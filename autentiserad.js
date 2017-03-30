@@ -49,9 +49,9 @@ loggin.addEventListener('click',function(event){
 
     });
     
-   // vipBtn.addEventListener("click", function(event){
-     //   window.alert("Hej Klara");
-    //});
+    vipBtn.addEventListener("click", function(event){
+        window.alert("Hej Klara");
+    });
 
     /**loggut**/
     
