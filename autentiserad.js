@@ -28,9 +28,9 @@ loggin.addEventListener('click',function(event){
         var user = result.user;
         userEmail = user.email; 
         if(user.displayName == null){
-            infoText.innerHTML = `Du är inloggad som ${user.email}`;
+            infotext.innerHTML = `Du är inloggad som ${user.email}`;
         } else {
-            infoText.innerHTML = `Du är inloggad som ${user.displayName}`;
+            infotext.innerHTML = `Du är inloggad som ${user.displayName}`;
         }
               
             if(userEmail == "klaralundgren@gmail.com"){
