@@ -34,7 +34,7 @@ loggin.addEventListener('click',function(event){
         }
               
             //if(userEmail == "klaralundgren@gmail.com"){
-                vipBtn.disabled = true;
+                vipBtn.disabled = false;
                   
         //    } else{ 
                         
@@ -57,7 +57,7 @@ loggin.addEventListener('click',function(event){
     
     loggut.addEventListener("click", function(event){
         userEmail = null;
-        vipBtn.disabled = false;
+        vipBtn.disabled = true;
     firebase.auth().signInWithPopup(provider)
     firebase.auth().signOut().then(function(result){
         //Utloggning lyckad
