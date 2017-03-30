@@ -24,7 +24,7 @@ var userEmail;
 loggin.addEventListener('click',function(event){
     
     // Skapa ett Promise som visar ett popup-fönster
-    firebase.auth().signInWithPopup(provider)
+        firebase.auth().signInWithPopup(provider)
     .then(function(result) {
         var user = result.user;
         userEmail = user.email; 
@@ -55,21 +55,35 @@ loggin.addEventListener('click',function(event){
     });
 
     /**loggut**/
-
-})
-
-loggut.addEventListener('click', function(){
-  firebase.auth().signOut()
-  .then(function(result){
-      
-      delete sessionStorage.user; 
-      userinfo.innerHTML = "";
-      
-  })
-})
     
+    loggut.addEventListener("click", function(event){
+        userEmail = null;
+        vipBtn.disabled = true;
+    firebase.auth().signInWithPopup(provider)
+    firebase.auth().signOut().then(function(result){
+        //Utloggning lyckad
+        console.log("Du är utloggad");
+        infoFail.innerHTML = `Du är inte inloggad`;
+    
+    })catch(function(error){
+        console.log("Utloggning misslyckades");
+        infoFail.innerHTML = "Utloggning misslyckades";
+    });
+        //infotext
+        loggin.stayle.display = "inherit";
+        loggut.style.display = "none";
+  
+});
+    
+
+
+
+
+}
+
+
  
-      }
+      
     
       
     
