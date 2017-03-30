@@ -58,7 +58,7 @@ loggin.addEventListener('click',function(event){
     loggut.addEventListener("click", function(event){
         userEmail = null;
         vipBtn.disabled = true;
-    //firebase.auth().signInWithPopup(provider)
+    firebase.auth().signInWithPopup(provider)
     firebase.auth().signOut().then(function(result){
         //Utloggning lyckad
         console.log("Du är utloggad");
