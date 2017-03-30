@@ -24,8 +24,7 @@ var userEmail;
 loggin.addEventListener('click',function(event){
     
     // Skapa ett Promise som visar ett popup-fönster
-        firebase.auth().signInWithPopup(provider)
-    .then(function(result) {
+        firebase.auth().signInWithPopup(provider).then(function(result) {
         var user = result.user;
         userEmail = user.email; 
         if(user.displayName == null){
