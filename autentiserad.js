@@ -2,7 +2,11 @@ window.onload = function(){
 
 var loggin = document.getElementById("loggin"); 
 var loggut = document.getElementById("loggut");    
-
+var infotext = document.getElementById("infotext");
+var infoFail = document.getElementById("infoFail");
+var vipBtn = document.getElementById("vipBtn"); 
+    
+    vipBtn.disabled = true;
     
 // Ett objekt för att hantera GitHub-autentisering
 var provider = new firebase.auth.GithubAuthProvider();
@@ -32,11 +36,7 @@ loggin.addEventListener('click',function(){
        console.log(user);
             }
 
-                /*user = JSON.parse(user);
-                userinfo.innerHTML = user.displayName;
-                var imageDiv = document.getElementById("imageDiv");
-                imageDiv.setAttribute('src', user.photoURL);
-            }*/
+               
         }
 
     })
