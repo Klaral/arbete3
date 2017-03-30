@@ -70,7 +70,7 @@ loggin.addEventListener('click',function(event){
         infoFail.innerHTML = "Utloggning misslyckades";
     });
         //infotext
-        loggin.stayle.display = "inherit";
+        loggin.style.display = "inherit";
         loggut.style.display = "none";
   
 });
