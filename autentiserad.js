@@ -9,7 +9,7 @@ var infoFail = document.getElementById("infoFail");
 var vipBtn = document.getElementById("vipBtn"); 
 var userEmail;    
     
-    vipBtn.disabled = true;
+    //vipBtn.disabled = true;
     
     
     
@@ -33,14 +33,14 @@ loggin.addEventListener('click',function(event){
             infotext.innerHTML = `Du är inloggad som ${user.displayName}`;
         }
               
-            if(userEmail == "klaralundgren@gmail.com"){
-                vipBtn.disabled = false;
+            //if(userEmail == "klaralundgren@gmail.com"){
+                vipBtn.disabled = true;
                   
-            } else{ 
+        //    } else{ 
                         
-       vipBtn.disabled = true;
+      
        
-            }
+            //}
 
                
         });
@@ -49,15 +49,15 @@ loggin.addEventListener('click',function(event){
 
     });
     
-    vipBtn.addEventListener("click", function(event){
-        window.alert("Hej Klara");
-    });
+   // vipBtn.addEventListener("click", function(event){
+     //   window.alert("Hej Klara");
+    //});
 
     /**loggut**/
     
     loggut.addEventListener("click", function(event){
         userEmail = null;
-        vipBtn.disabled = true;
+        vipBtn.disabled = false;
     firebase.auth().signInWithPopup(provider)
     firebase.auth().signOut().then(function(result){
         //Utloggning lyckad
