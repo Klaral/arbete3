@@ -61,6 +61,7 @@ loggin.addEventListener('click',function(event){
     firebase.auth().signInWithPopup(provider)
     firebase.auth().signOut().then(function(result){
         //Utloggning lyckad
+        infotext.style.display ="none";
         console.log("Du är utloggad");
         infoFail.innerHTML = `Du är inte inloggad`;
     
