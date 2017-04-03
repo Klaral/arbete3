@@ -9,13 +9,9 @@ var infoFail = document.getElementById("infoFail");
 var vipBtn = document.getElementById("vipBtn"); 
 var userEmail;    
     
-    //vipBtn.disabled = true;
     
-    
-    
-    /**VIP**/
-    
-    loggut.style.dispaly = "none";
+        loggut.style.dispaly = "none";
+        vipBtn.style.dispaly = "none";
 
  
     
