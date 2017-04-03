@@ -73,8 +73,8 @@ loggin.addEventListener('click',function(event){
         infoFail.innerHTML = "Utloggning misslyckades";
     });
         //infotext
-        loggin.style.display = "inherit";
-        loggut.style.display = "none";
+       // loggin.style.display = "inherit";
+        //loggut.style.display = "none";
   
 });
     
