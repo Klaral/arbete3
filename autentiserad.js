@@ -26,8 +26,8 @@ loggin.addEventListener('click',function(event){
         if(user.displayName == null){
             infotext.innerHTML = `Du är inloggad som ${user.email}`;
             
-            vipBtn.style.display = "inline-block";
-            loggut.style.display = "inline-block";
+            //vipBtn.style.display = "inline-block";
+            //loggut.style.display = "inline-block";
             
         } else {
             infotext.innerHTML = `Du är inloggad som ${user.displayName}`;
