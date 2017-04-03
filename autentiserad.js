@@ -10,8 +10,10 @@ var vipBtn = document.getElementById("vipBtn");
 var userEmail;    
     
     
-        loggut.style.dispaly = "none";
-        vipBtn.disabled = true;
+        //loggut.style.dispaly = "none";
+        //vipBtn.disabled = true;
+    loggut.disabled = true;
+        vipBtn.disabled = false;
 
  
     
