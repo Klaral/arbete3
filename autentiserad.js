@@ -68,6 +68,9 @@ loggin.addEventListener('click',function(event){
         infotext.style.display ="none";
         console.log("Du är utloggad");
         infoFail.innerHTML = `Du är inte inloggad`;
+        
+        loggut.style.display = "none";
+    vipBtn.style.display = "none";
     
     }).catch(function(error){
         console.log("Utloggning misslyckades");
