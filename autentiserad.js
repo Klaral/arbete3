@@ -11,7 +11,7 @@ var userEmail;
     
     
         loggut.style.dispaly = "none";
-        vipBtn.disabled = "true";
+        vipBtn.disabled = true;
 
  
     
@@ -26,17 +26,19 @@ loggin.addEventListener('click',function(event){
         if(user.displayName == null){
             infotext.innerHTML = `Du är inloggad som ${user.email}`;
             
-            vipBtn.disabled = "false";
+            //vipBtn.disabled = "false";
             
             
         } else {
             infotext.innerHTML = `Du är inloggad som ${user.displayName}`;
         }
               
-            //if(userEmail == "klaralundgren@gmail.com"){
-                vipBtn.disabled = true;
+            if(userEmail == "klaralundgren@gmail.com"){
+                vipBtn.disabled = false;
                   
-        
+            }else {
+                vipBtn.disabled = true;
+            }
 
                
         });
