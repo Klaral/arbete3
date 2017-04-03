@@ -10,10 +10,10 @@ var vipBtn = document.getElementById("vipBtn");
 var userEmail;    
     
     
-        //loggut.style.dispaly = "none";
-        //vipBtn.disabled = true;
-    loggut.disabled = true;
-        vipBtn.disabled = false;
+        vipBtn.disabled = true;    
+        loggut.style.display = "none";
+        
+    
 
  
     
@@ -36,7 +36,7 @@ loggin.addEventListener("click",function(event){
         }
               
             if(userEmail == "klaralundgren@gmail.com"){
-                vipBtn.disabled = false;
+               vipBtn.disabled = false;
                   
             }   else {
                 vipBtn.disabled = true;
