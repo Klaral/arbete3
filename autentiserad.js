@@ -17,7 +17,7 @@ var userEmail;
     
     /**loggin**/
     
-loggin.addEventListener('click',function(event){
+loggin.addEventListener("click",function(event){
     
     // Skapa ett Promise som visar ett popup-fönster
         firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -36,14 +36,14 @@ loggin.addEventListener('click',function(event){
             if(userEmail == "klaralundgren@gmail.com"){
                 vipBtn.disabled = false;
                   
-            }else {
+            }   else {
                 vipBtn.disabled = true;
-            }
+                }
 
                
         });
     loggin.style.display = "none";
-    loggut.style.dispaly = "inherit";
+    loggut.style.display = "inherit";
 
     });
     
@@ -61,7 +61,7 @@ loggin.addEventListener('click',function(event){
         //Utloggning lyckad
         infotext.style.display ="none";
         console.log("Du är utloggad");
-        infoFail.innerHTML = `Du är inte inloggad`;
+        infotext.innerHTML = `Du är inte inloggad`;
         
         
     
